@@ -103,8 +103,6 @@ function largeNumbers({first, second, third}) {
   }
 }
 
-
-
 ////////// PROBLEM 6 //////////
 
 /*
