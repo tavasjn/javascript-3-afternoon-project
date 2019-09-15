@@ -40,7 +40,13 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let string = '';
+  for(let key in obj) {
+    if(typeof obj[key] === typeof ''){
+      string += obj[key];
+    }
+  }
+  return string
 }
 
 
@@ -53,7 +59,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+const greaterThan10 = (obj) => {
+  for(let key in obj){
+    if(obj[key] > 10){
+      obj[key] = 0
+    }
+  }
+  return obj
+}
 
 
 
@@ -65,7 +78,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double( obj ) {
+  for(let prop in obj) {
+    obj[prop] *= 2;
+  }
+  return obj;
+}
 
 
 
@@ -79,7 +97,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+const secrets = (obj) => {
+  let string = '';
+  for(let prop in obj) {
+    if(prop.startsWith('sh')) {
+      string += obj[prop]
+    }
+  }
+  return string;
+}
 
 
 
@@ -110,7 +136,12 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+const removePassword = (obj) => {
+  for(let prop in obj) {
+    delete obj.password;
+  }
+  return obj;
+}
 
 
 
@@ -129,7 +160,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for(let key in deleteTheBigNumbers) {
+  if(deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key];
+  }
+}
 
 
 
@@ -142,7 +177,14 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+const startsWithK = (obj) => {
+  for(let prop in obj) {
+    if(prop.startsWith('k')) {
+      delete obj[prop]
+    }
+  }
+  return obj;
+}
 
 
 
@@ -157,6 +199,13 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+const hiddenTreasure = (obj) => {
+  for(let prop in obj) {
+    if(!obj[prop].includes('treasure')) {
+      delete obj[prop]
+    }
+  }
+  return obj;
+}
 
 
