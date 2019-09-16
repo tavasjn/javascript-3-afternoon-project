@@ -50,7 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+const employeeUpdater = () => {
+  let updatedEmployees = employees.filter((element, index, arr) => {
+    if(element.firstName === 'Theo'){
+      //return element, if we included this line then 'Theo' would be in the new array, updatedEmployees
+      //If firstName === 'Theo', then doesn't do anything
+    } else if(element.firstName === 'Lorie'){
+      element.department = 'HR'
+      return element
+    } else return element
+  })
+  return updatedEmployees
+}
 
 
 
@@ -68,7 +79,10 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+const removeDuplicates = (arr) => {
+  let newArr = [...new Set(arr)]
+  return newArr
+}
 
 
 
@@ -97,8 +111,9 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+
+let grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -138,7 +153,17 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+let recordCleaner = () => {
+  myCar.accidents.forEach((element, index, array) => {
+    element.atFaultForAccident = false;
+  })
+  // for(let key in myCar.accidents) {
+  //   console.log(key)
+  //   console.log(key.atFaultForAccident)
+  //   key.atFaultForAccident = false;
+  // }
+  return myCar
+}
 
 
 
@@ -157,6 +182,21 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+let looper = () => {
+  numsArr = numsArr.map((element, index, array) => {
+      element = element.map((element2, index2, array2) => {
+      console.log(element2)
+      if(element2 % 2 === 1){
+        return 'odd'
+      } else {
+        return 'even'
+      }
+      // return element2
+    })
+    console.log(element)
+    return element;
+  })
+  return numsArr
+}
 
 

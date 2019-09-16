@@ -167,7 +167,6 @@ for(let key in deleteTheBigNumbers) {
 }
 
 
-
 ////////// PROBLEM 7 //////////
 
 /*
